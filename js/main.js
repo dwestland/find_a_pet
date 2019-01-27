@@ -3,7 +3,6 @@ import apiConfig from './apiKeys';
 import { isValidZip, showAlert } from './validate'
 
 const petfinderApiKey = apiConfig.PETFINDER_API_KEY
-
 const petForm = document.querySelector('#pet-form')
 
 petForm.addEventListener('submit', fetchAnimals)
@@ -18,7 +17,7 @@ function fetchAnimals(e) {
 
   // Validate Zip
   if (!isValidZip(zip)) {
-    showAlert('Please Enter a Valid Zipcode', 'danger')
+    showAlert('Please Enter a Valid Zip Code', 'danger')
     return
   }
 
@@ -64,7 +63,6 @@ function showAnimals(pets) {
       
       </div>
     `
-
     results.appendChild(div)
   })
 }
